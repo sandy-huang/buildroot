@@ -10,7 +10,7 @@ IO_LICENSE = GPL-2.0+
 IO_LICENSE_FILES = COPYING.GPL
 
 define IO_BUILD_CMDS
-	$(TARGET_CC) $(TARGET_CFLAGS) $(TARGET_LDFLAGS) $(@D)/io.c -o $(@D)/io
+	$(TARGET_CC) $(TARGET_CFLAGS) $(TARGET_LDFLAGS) $(@D)/io.c -static -o $(@D)/io
 endef
 
 define IO_INSTALL_TARGET_CMDS
