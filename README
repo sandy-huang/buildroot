@@ -24,3 +24,19 @@ You can also find us on #buildroot on OFTC IRC.
 
 If you would like to contribute patches, please read
 https://buildroot.org/manual.html#submitting-patches
+
+
+/* add by hjc@rock-chips.com */
+
+config:
+make list-defconfigs    查看当前支持的defconfig
+make a7_mini_defconfig  使用外部的toolchain，在rv1109上测试使用，io tool未加入
+make rk1109_a7_defconfig 使用buildroot自带的toolchain，同时加入io tool
+
+使用方法:
+make rk1109_a7_defconfig 生成.config 配置
+make menuconfig          配置组件
+make savedefconfig       将最新配置保存到configs/rk1109_a7_defconfig
+
+64bit 使用 
+make a53_mini_defconfig
